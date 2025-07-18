@@ -1,0 +1,507 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --header-color: #33393A;
+    --hover-color: #C8DCDA;
+    --light-blue: #D7DFE4;
+    --dark-blue: #085576;
+
+
+}
+body {
+    font-family: 'Inria Serif', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--header-color);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    max-width: 95%;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 20px 20px;
+    display: block;
+    font-weight: 300;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--hover-color);;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center; /* aligns vertically */
+}
+
+.logo-text a {
+  display: flex;
+  align-items: center; /* makes image + text align inside the link */
+  color: #fff; /* ensures ARECIBO stays white */
+}
+
+.logo-text img {
+  height: 40px; /* adjust to fit your design */
+  margin-right: 10px;
+  display: block;
+}
+
+.brand-name {
+  font-family: 'Inria Serif', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+
+/* hero */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    background: url('../images/home/hero_image.png') no-repeat center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.hero-contents {
+    width: 100%;
+}
+
+.hero-text {
+    margin-top: 8rem;
+}
+
+
+/* mission statement */
+.about-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap; 
+}
+
+.about-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+
+.about-us {
+    color: var(--dark-blue);
+}
+.statement-content {
+    padding: 20px 0 50px
+}
+
+
+/* --- NEW Meet the Team layout --- */
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+.team-members {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.member {
+    text-align: center;
+    max-width: 220px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.member img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.member h4 {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.member p {
+    color: #ccc;
+}
+
+.team-heading,
+.team-title-big {
+    text-align: left;
+}
+
+.team-title-big {
+    font-family: 'Inria Serif', serif;
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+/* Stack portraits and heading vertically on narrow screens */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-heading {
+        margin-top: 20px;
+    }
+}
+
+/* --- Work With Us section --- */
+.work-with-us {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.work-title,
+.work-description {
+    margin-bottom: 20px;
+}
+
+.work-form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.form-control {
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+}
+
+.form-control label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--header-color);
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    border-color: var(--dark-blue);
+    box-shadow: 0 0 0 2px rgba(51, 57, 58, 0.2);
+}
+
+.work-form .btn {
+    align-self: center;
+}
+
+/*footer*/
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    line-height: 2.5;
+}
+
+.footer a {
+    color:#ccc;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr; 
+  gap: 30px;
+  align-items: flex-start;
+  padding: 30px 0;
+}
+
+.footer .card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.footer-icons {
+  margin-top: 30px;
+}
+
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #ccc;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+/*utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 1200px;
+    margin: 0 500px 0 80px;
+}
+
+/* buttons */
+.btn {
+    display: incline-block;
+    padding: 13px 20px;
+    background: var(--dark-blue);
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* text classes */
+.text-xxl {
+    position: static;
+    font-size: 3.3rem;
+    line-height: 1.2;
+    font-weight: 510;
+    text-align: center;
+    color: #fff;
+}
+
+.text-xl {
+    font-size: 2.3rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 20px 0 20px;
+}
+
+.text-md {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* background */
+.bg-light-blue {
+    background: var(--light-blue);
+    color: var(--header-color);
+}
+
+.bg-dark {
+    background: var(--header-color);
+    color: #fff
+}
+
+.bg-dark-blue {
+    background: var(--dark-blue);
+    color: #fff
+}
+
+/* card */
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+
+
+/* --- About Us --- */
+.about-page .text-xl {
+    color: var(--dark-blue)
+}
+.about-hero {                      
+  height: 55vh;
+  margin-top: 60px;
+  background: url('../images/about/about-us-hero.png') center/cover no-repeat;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+/* flip columns on alternated sections */
+
+.about-grid.reverse {
+  direction: rtl; 
+}
+
+.about-grid.reverse > * {
+  direction: ltr; 
+}
+
+.text-block { 
+    max-width: 550px; 
+    margin-bottom: 100px;
+}
+
+.values-list li {
+  margin: 12px 0;
+}
+
+/* our roots */
+.roots-section {
+  margin: 0;
+  padding: 60px 0;
+}
+
+.roots-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.roots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.roots-section .card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.roots-section .container.edge {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.text-lg { font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
+.text-xs { font-size: 0.75rem; color: #666; margin-top: 8px; }
+
+/* --- Edge‑to‑edge image layout --- */
+.edge {                          
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.about-grid {                    
+  gap: 0;
+}
+
+.about-grid img {               
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             
+  display: block;                
+}
+
+.text-block {                    
+  padding: 50px 40px;           
+}
+
+.about-grid.reverse img { order: 2; }
+
