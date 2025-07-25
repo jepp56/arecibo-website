@@ -636,3 +636,12 @@ img {
 
 .about-grid.reverse img { order: 2; }
 
+/*Services Page*/
+.services-page .text-xxl{
+  color: var(--dark-blue)
+}
+.tbd-text {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 50px;
+}
