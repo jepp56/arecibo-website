@@ -10,6 +10,7 @@
     --hover-color: #C8DCDA;
     --light-blue: #D7DFE4;
     --dark-blue: #085576;
+    --orange: #DB8822;
 
 
 }
@@ -69,17 +70,17 @@ img {
 
 .logo-text {
   display: flex;
-  align-items: center; /* aligns vertically */
+  align-items: center; 
 }
 
 .logo-text a {
   display: flex;
-  align-items: center; /* makes image + text align inside the link */
-  color: #fff; /* ensures ARECIBO stays white */
+  align-items: center; 
+  color: #fff; 
 }
 
 .logo-text img {
-  height: 40px; /* adjust to fit your design */
+  height: 40px; 
   margin-right: 10px;
   display: block;
 }
@@ -93,26 +94,148 @@ img {
 
 
 /* hero */
-.hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 80vh;
-    background: url('../images/home/hero_image.png') no-repeat center;
-    background-size: cover;
-    position: relative;
-    
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.carousel .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+
+}
+.carousel .list .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 60px;
+}
+.carousel .list .item .content {
+  position: absolute;
+  top: 30%;
+  width: 1140px;
+  max-width: 60%;
+  left: 37%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0084;
+}
+.carousel .list .item .content .name {
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.carousel .list .item .content .title {
+  font-weight: bold;
+  font-size: 4.5em;
+  line-height: 1em;
+}
+.carousel .list .item .content .description {
+  margin-top: 20px;
+  line-height: 1.3em;
+  opacity: 90%;
+}
+.carousel .list .item .content .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+.carousel .list .item .content button {
+  border: none;
+  background-color: var(--orange);
+  letter-spacing: 3px;
+  font-weight: 500;
+  transition: .5s;
+}
+.carousel .list .item .content button:nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+  border: 1px solid #eee;
+}
+.carousel .list .item .content button:hover{
+  opacity: 0.8;
 }
 
-.hero-contents {
-    width: 100%;
+.arrows {
+  position: absolute;
+  top: 92%;
+  right: 72%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.arrows button{
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: large;
+  transition: .5s;
+  z-index: 100;
+}
+.arrows button:hover {
+  color:#000;
+  background-color: #fff;
+}
+.carousel .list .item:nth-child(1){
+  z-index: 1;
+}
+.carousel .list .item:nth-child(1) .name,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .description,
+.carousel .list .item:nth-child(1) .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+  to{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateY(0);
+  }
 }
 
-.hero-text {
-    margin-top: 8rem;
+.carousel .list .item:nth-child(1) .title{
+  animation-delay: 1s;
+}
+.carousel .list .item:nth-child(1) .description{
+  animation-delay: 1.4s;
+}
+.carousel .list .item:nth-child(1) .buttons{
+  animation-delay: 1.6s;
 }
 
+.carousel.next .list .item:nth-child(1) img{
+  opacity: 0.7;
+  filter: blur(5px);
+  animation: showImage 0.5s linear 1 forwards;
+}
+@keyframes showImage{
+  to{
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@media screen and (max-width: 678px) {
+  .carousel .list .item .content {
+    padding-right: 0;
+  }
+  .carousel .list .item .content .title {
+    font-size: 30px;
+  }
+}
 
 /* mission statement */
 .about-flex {
@@ -129,6 +252,8 @@ img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .about-text {
@@ -339,9 +464,13 @@ img {
     font-weight: 500;
     text-decoration: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
+}
+
+.btn-orange {
+  background: var(--orange);
 }
 
 .btn:hover {
@@ -411,9 +540,11 @@ img {
 
 
 /* --- About Us --- */
+
 .about-page .text-xl {
     color: var(--dark-blue)
 }
+
 .about-hero {                      
   height: 55vh;
   margin-top: 60px;
