@@ -549,6 +549,11 @@ img {
   height: 55vh;
   margin-top: 60px;
   background: url('../images/about/about-us-hero.png') center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-grid {
