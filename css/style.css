@@ -164,7 +164,7 @@ img {
 .arrows {
   position: absolute;
   top: 92%;
-  right: 72%;
+  left: 90%;
   width: 300px;
   max-width: 30%;
   display: flex;

@@ -29,7 +29,7 @@ prevDom.onclick = function(){
     showSlider('prev');
     resetAutoSlide();
 }
-let timeAutoNext = 7000;
+let timeAutoNext = 8000;
 let runAuto = setInterval(() => {
         showSlider('next');
     }, timeAutoNext);
