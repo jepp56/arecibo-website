@@ -3,15 +3,17 @@ let prevDom = document.getElementById('prev');
 let carouselDom = document.querySelector('.carousel');
 let listItemDom = document.querySelector('.carousel .list');
 
-document.getElementById('learnMoreBtn').onclick = function () {
-  window.location.href = 'about.html'; 
-};
+document.querySelectorAll('.learnMoreBtn').forEach(btn => {
+  btn.onclick = () => {
+    window.location.href = 'about.html';
+  };
+});
 
-document.getElementById('joinUsBtn').onclick = function () {
-  document.getElementById('join-us').scrollIntoView({ 
-    behavior: 'smooth' 
-  });
-};
+document.querySelectorAll('.joinUsBtn').forEach(btn => {
+  btn.onclick = () => {
+    document.getElementById('join-us').scrollIntoView({ behavior: 'smooth' });
+  };
+});
 
 
 function resetAutoSlide() {
