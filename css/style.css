@@ -11,6 +11,7 @@
     --light-blue: #D7DFE4;
     --dark-blue: #085576;
     --orange: #DB8822;
+    --impact-gap: 20px;
 
 
 }
@@ -267,6 +268,37 @@ img {
 .statement-content {
     padding: 20px 0 50px
 }
+
+/* Targeting section layout & styling */
+.targeting-section {
+  background-color: var(--dark-blue);
+  padding: 60px 20px;
+  color: #0b4f6c;
+}
+
+.targeting-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  max-width: 1100px;
+}
+
+.targeting-img img {
+  width: 100%;
+  max-width: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.targeting-text {
+  flex: 1 1 320px;
+  padding: 24px;
+  text-align: right;
+  color: #fff;
+  font-size: 3rem;
+}
+
 
 
 /* --- NEW Meet the Team layout --- */

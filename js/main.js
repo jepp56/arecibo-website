@@ -45,4 +45,38 @@ function showSlider(type){
     }
 }
 
-
+function sendMessage() {
+    const token = grecaptcha.getResponse()
+    if (token.length === 0) {
+        alert("Please complete the captcha");
+        return;
+    }
+    if (!$('#contact-email').get(0).checkValidity()) {
+        alert("Please enter a valid email address");
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: "https://ringed-rune-465501-e3.uc.r.appspot.com/api/contact",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify({
+            name: $("#contact-name").val(),
+            email: $("#contact-email").val(),
+            message: $("#contact-message").val(),
+            token: token
+        }),
+        success: function (data) {
+            if (data.code === 0) {
+                alert("Message sent");
+            } else if (data.code === 1) {
+                alert("System error");
+            } else if (data.code === 2){
+                alert("Please complete the captcha");
+            }
+        },
+        error: function (data) {
+            alert("Error");
+        }
+    })
+}
