@@ -718,6 +718,75 @@ img {
   max-width: 65%;
  }
 
+ /*our team section*/
+ .our-team {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+ }
+ .team-header {
+  margin-top: 75px;
+  text-align: center;
+  color: var(--dark-blue);
+ }
+ .wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+ }
+ .card-container {
+  position: relative;
+ }
+ .card-container .team-card{
+  width: 300px;
+  border-radius: 25px;
+  padding: 20px;
+  /*background: #fff;*/
+  margin: auto;
+ }
+ .card-container .team-card .img-container {
+  padding: 25px;
+  padding-bottom: 30px;
+ }
+
+ .img-container img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+ }
+ .img-container {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+ }
+.team-card .info {
+  position: relative;
+}
+.team-card .info .name {
+  position: static;
+  transform: none;
+  display: block;
+  color: var(--header-color);
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.team-card .info .title {
+  text-align: center;
+}
+.team-card .info .description{
+  text-align: center;
+  font-size: small;
+}
 
 
 /*Services Page*/
