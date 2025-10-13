@@ -192,3 +192,40 @@ $(document).ready(function () {
     });
   }
 });
+
+//behind the numbers animation
+const counters = document.querySelectorAll('.stat-number');
+let hasAnimated = false;
+
+function animateCounters() {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000;
+    const step = target / (duration / 20);
+    let current = 0;
+
+    const update = () => {
+      current += step;
+      if (current < target) {
+        counter.textContent = Math.floor(current).toLocaleString();
+        requestAnimationFrame(update);
+      } else {
+        // Format text for final display
+        if (target === 50) counter.textContent = "50%";
+        else if (target === 257) counter.textContent = "$257B";
+        else counter.textContent = "16M";
+      }
+    };
+    update();
+  });
+}
+
+// Trigger animation on scroll into view
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !hasAnimated) {
+    animateCounters();
+    hasAnimated = true;
+  }
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector('#stats'));

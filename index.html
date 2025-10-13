@@ -21,8 +21,8 @@
     />
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/arecibo_logo.ico" type="image
-    /x-icon"/>
+    <link rel="shortcut icon" href="images/arecibo_logo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 <nav class="navbar">
@@ -40,6 +40,9 @@
                 </li>
                 <li>
                     <a href="about.html">About&nbsp;Us</a>
+                </li>
+                 <li>
+                    <a href="products.html">Products</a>
                 </li>
                 <li>
                     <a href="services.html">Services</a>
@@ -118,11 +121,13 @@
             <h1 class="about-us text-md">About Us</h1>
             <h2 class="mission-statement text-xl">Together, with AI</h2>
             <h3 class="statement-description text-md">
-                We build intelligence-based products that augment businesses and improve human lives 
-                to bridge the gap between humanity and augmented intelligence.
+                We build intelligence-based products that bridge the gap between humanity and augmented 
+                intelligence improving human lives and healthcare businesses. <br> <br>
+                Our first product, Arecibo ARC, is an AI Companion mobile app for aging people with 
+                cognitive impairment that aims to connect a family in the elder’s life-story and gain health insights for caregivers.
             </h3>
             <div class="statement-content">
-                <a href="about.html" class="btn">Read Our Story</a>
+                <a href="about.html" class="btn">Learn More About Us</a>
             </div>
         </div>
 
@@ -147,28 +152,53 @@
     </div>
 </section>
 
+<!--behind the numbers-->
+<section id="stats" class="stats-section bg-light-blue">
+  <div class="stats-header">
+    <div class="header-bubble">
+        <i class="fa-solid fa-magnifying-glass header-icon"></i>
+        <h2 class="text-md">Behind the numbers</h2>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <i class="fa-solid fa-notes-medical card-icon"></i>
+      <h3 class="stat-number" data-target="16000000">0</h3>
+      <p>1/3 of all Americans ages 65+ have some level of cognitive impairment.*</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-code-branch card-icon"></i>
+      <h3 class="stat-number" data-target="50">0%</h3>
+      <p>Increased dementia risk from social isolation among the elderly ages 65+.**</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-chart-column card-icon"></i>
+      <h3 class="stat-number" data-target="257">0</h3>
+      <p>Annual economic impact of cognitive impairment in the U.S.* </p>
+    </div>
+  </div>
+
+  <p class="footnote">
+    *AHR: R01HS024262, 68AX19-16<br>
+    **2020 Report from National Academies of Science, Engineering, and Medicine
+  </p>
+</section>
+
 <section class="making-differences bg-light-blue">
-    <h2 class="text-l">How Arecibo AI Makes a Difference</h2>
+    <h2 class="text-l">How Arecibo AI Makes a Difference (this section will be changed)</h2>
     <div class="cards">
         <div class="targeting-card">
             <img src="images/home/use-cases.png" alt="use cases">
-            <h3>Innovation</h3>
-            <p class="text-sm">Our products addresses specific needs of older adults and their caregivers, improving lives through AI-driven solutions.</p>
+            <h3>Arecibo ARC</h3>
+            <p class="text-sm">Our product addresses specific needs of older adults and their caregivers, improving lives through AI-driven solutions.</p>
         </div>
         <div class="targeting-card">
             <img src="images/home/ai-services.png" alt=" ai services">
             <h3>AI Services</h3>
             <p class="text-sm">Arecibo provides solutions are tailored to meet the unique needs of every client, delivering AI-driven services that empowers and supports the people</p>
-        </div>
-        <div class="targeting-card">
-            <img src="images/home/voice-library.png" alt="social impact">
-            <h3>Social Impact</h3>
-            <p class="text-sm">Arecibo makes a difference in long-term care communities by creating meaningful connections through shared experiences.</p>
-        </div>
-        <div class="targeting-card">
-            <img src="images/home/tracking-stories.png" alt="tracking stories">
-            <h3>Tracking Stories</h3>
-            <p class="text-sm">Through (product name), we preserve the unique voices of seniors, ensuring that stories and histories are treasured for the future.</p>
         </div>
     </div>
 </section>
@@ -179,8 +209,7 @@
         <h3 class="text-xl work-title">Connect With Us!</h3>
 
         <p class="text-md work-description">
-            If you are interested in healthcare technology, Artificial Intelligence, or want to support our cause, send
-            us a message!
+            Investing in the next wave of responsible AI? We’re building verifiable, regulation-ready systems that deliver measurable impact in healthcare.
         </p>
 
         <form class="work-form" action="#" method="post">

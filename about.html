@@ -36,6 +36,9 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About&nbsp;Us</a></li>
+           <li>
+                    <a href="products.html">Products</a>
+                </li>
           <li><a href="services.html">Services</a></li>
         </ul>
       </div>
@@ -44,27 +47,35 @@
 
   <!--  HERO -->
   <header class="about-hero">
-    <div class="container">
-      <h1 class="title-text text-xxl">About Us</h1>
+    <div class="hero-overlay">
+      <div class="mission-card">
+        <h2 class="text-xl">Our Mission</h2>
+          <p>
+            Whether its through our product that empowers meaningful engagement with elders or with our AI services, 
+            we hope to bridge the gap between humanity and augmented intelligence.
+          </p>
+          <a href="#our-story" class="btn">Read Our Story</a>
+      </div>
     </div>
   </header>
 
-  <!--  OUR MISSION  -->
-  <section class="mission bg-light-blue">
+  <!--  OUR VALUES  -->
+  <section class="values bg-light-blue">
     <div class="container edge about-grid">
-      <div class="text-block">
-        <h2 class="text-xl">Our Mission</h2>
-        <p class="text-md">
-          Whether its through our product that empowers meaningful engagement with elders or with our AI services, 
-          we hope to bridge the gap between humanity and augmented intelligence.
-        </p>
-      </div>
-      <img src="images/about/our-mission.png" alt="Grandfather" />
+        <div class="text-block">
+            <h2 class="text-xl">Our Values</h2>
+            <ul class="values-list">
+                <li><strong>Human‑Centered Simplicity:</strong> We prioritize the community. Our tools are designed to reduce complexity in service while still providing essential support to the people.</li>
+                <li><strong>Trustworthy Innovation:</strong> We make evidence-first, compliant and auditable AI tools to enhance the quality and research of healthcare alongside humans.</li>
+                <li><strong>Building Connection:</strong> Through augmented intelligence, we hope to bridge the age gap across generations to foster increased connection between humanity.</li>
+            </ul>
+        </div>
+        <img src="images/about/our-values.png" alt="holding hands" />
     </div>
   </section>
 
   <!--  OUR STORY  -->
-  <section class="mission bg-light-blue">
+  <section id="our-story" class="mission bg-light-blue">
     <div class="container edge about-grid reverse">
       <div class="text-block">
         <h2 class="text-xl">Our Story</h2>
@@ -78,20 +89,7 @@
     </div>
   </section>
 
-  <!--  OUR VALUES  -->
-  <section class="mission bg-light-blue">
-    <div class="container edge about-grid">
-        <div class="text-block">
-            <h2 class="text-xl">Our Values</h2>
-            <ul class="values-list">
-                <li><strong>Human‑Centered Simplicity:</strong> We prioritize the community. Our tools are designed to reduce complexity in service while still providing essential support to the people.</li>
-                <li><strong>Trustworthy Innovation:</strong> Our focus is on addressing everyday challenges within the healthcare field with technological innovation.</li>
-                <li><strong>Building Connection:</strong> Through augmented intellegence, we hope to bridge the age gap across generations to foster increased connection between humanity.</li>
-            </ul>
-        </div>
-        <img src="images/about/our-values.png" alt="holding hands" />
-    </div>
-  </section>
+  
 
   <!--  OUR ROOTS  -->
   <section class="inspiration bg-light-blue">
@@ -99,38 +97,40 @@
         <!-- Arecibo Message -->
       <div class="arecibo-message">
         <div class="image-circle">
-          <img src="images/about/arecibo-message.png" alt="arecibo message">
+          <img src="images/about/benny-granfather.png" alt="benny grandfather">
         </div>
         <div class="text">
-          <h3 class="text-xl">The Arecibo Message</h3>
-          <p class="text-sm">
-            The Arecibo Message is an interstellar radio message carrying basic information about humanity 
-            and Earth that was sent to distant space from the Arecibo Telescope in Puerto Rico in Nov 1974. 
-            It was meant as a demonstration of human technological achievement, rather than a real attempt to enter 
-            into a conversation with extraterrestrials. <br><br>
-            We reference this impactful message to symbolize our desire to utilize the untapped potential of AI 
-            in order to  remotely communicate meaningful data between the disconnected.
+          <h3 class="text-xl">Our Purpose</h3>
+          <p>
+            Before his grandparents recently passed away from dementia, 
+            Benny and his family members had the privilege and burden of 
+            caring for them while they shared stories of their 72-year marriage. <br><br>
+            Their storytelling connected the family, including the 75 grandchildren, 
+            to the aging patriarch and matriarch supporting their quality of life and care.
+             It inspired Benny and Yanshan to create a conversational AI companion which engages 
+             with elders and transforms those life-stories into meaningful health insights for 
+             caregivers.
           </p>
         </div>
       </div>
     </section>
-    <section class="arecibo-radio bg-dark-blue">
+      <section class="arecibo-radio bg-dark-blue">
       <div class="text">
-        <h3 class="text-xl">The Arecibo Radio</h3>
-        <p class="text-sm">
+        <h3 class="text-xl">The Arecibo Inspiration</h3>
+        <p>
           Our name and logo both are inspired by the Arecibo radio telescope, once one of the largest and most 
           powerful radio observatories in the world. Located in Puerto Rico, it was built to listen for faint signals 
           from deep space, unlocking discoveries about the unknown. <br><br>
 
-          In the same spirit, Arecibo AI is built to listen deeply to the often-overlooked signals in
-          care-giving and cognitive health. We believe that meaningful care starts with paying attention—quietly, 
-          intelligently, and with empathy.
+         Just as NASA’s Arecibo Telescope transmitted a story of humanity into deep space in the 1970’s, 
+         Arecibo AI connects humans to our technological story across the widening gap of the AI space. 
         </p>
       </div>
       <div class="image-circle">
         <img src="images/about/arecibo-radio.png" alt="Arecibo Radio Telescope">
       </div>
     </section>
+    
 
     <!--Our Team-->
     <section class="our-team bg-light-blue">
@@ -143,7 +143,15 @@
 
             <div class="team-card item">
               <div class="img-container">
-                <img src="/images/home/benny_esparra.png">
+                  <img src="/images/home/benny_esparra.png">
+                  <div class="team-hover-overlay">
+                    <p>
+                        With over 25 years of healthcare leadership with clinical, commercial, and digital antecedents, 
+                        Benny leads the business strategy and development of Arecibo AI. His research in AI maturity in 
+                        HealthTech companies and healthcare organizations is bolstered by his human-centered implementation 
+                        of AI systems.
+                    </p>
+                  </div>
               </div>
               <div class="info">
                 <span class="name text-md">Benny Esparra</span>
@@ -152,9 +160,16 @@
               </div>
             </div>
 
-            <div class="team-card item">
+             <div class="team-card item">
               <div class="img-container">
-                <img src="/images/home/yanshan_wang.png">
+                  <img src="/images/home/yanshan_wang.png">
+                  <div class="team-hover-overlay">
+                    <p>
+                        A professor of health informatics and AI in prestigious academic medical institutions and 
+                        NLP Director of a major AI Center of Excellence with global experience in Health AI development,
+                        Yanshan leads the technological design, engineering, and deployment of AI systems for Arecibo AI.
+                    </p>
+                  </div>
               </div>
               <div class="info">
                 <span class="name text-md">Yanshan Wang</span>
@@ -197,7 +212,8 @@
             <h3 class="text-xl work-title">Connect With Us!</h3>
 
             <p class="text-md work-description">
-                If you are interested in healthcare technology, Artificial Intelligence, or want to support our cause, send us a message!
+                Investing in the next wave of responsible AI? We’re building verifiable, regulation-ready systems that deliver measurable impact in healthcare. Contact our team to get involved.
+
             </p>
 
             <form class="work-form" action="#" method="post">
