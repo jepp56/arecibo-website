@@ -28,19 +28,164 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About&nbsp;Us</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="services.html">Services</a></li>
             </ul>
         </div>
         </div>
     </nav>
 
-     <!--tbd section-->
-   <section class="tbd bg-light-blue">
-        <div class="tbd-text">
-            <h1 class="about-us text-xxl">Coming Soon!</h1>
+    <!-- hero section -->
+   <section class="services-hero">
+        <div class="overlay">
+            <div class="hero-content">
+                <p>Arecibo AI-as-a-Service</p>
+                <h1>Bettering Healthcare Technologies Globally</h1>
+                <p class="service-description">this is some description about Arecibo AIaas that will be changed</p>
+                <a href="#join-us" class="btn btn-orange">Contact Us</a>
+            </div>
          </div>
     </section>
 
-    
+    <!-- study findings section -->
+     <section class="study-findings bg-light-blue">
+        <h4 class="section-heading text-sm">Study Findings</h4>
+        <h2>AI's Potential to Revolutionize Healthcare.</h2>
+        <div class="service-stats">
+            <div class="service-stat">
+                <h3>66%</h3>
+                <p>of US physicians reported using healthcare AI in 2024.*</p>
+            </div>
+            <div class="service-stat">
+                <h3>$100 B</h3>
+                <p>is the estimated annual worth of AI applications in medical fields.**</p>
+            </div>
+            <div class="service-stat">
+                <h3>94%</h3>
+                <p>of healthcare organizations considered AI central to their operations.*</p>
+            </div>
+        </div>
+
+        <div class="sources">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10815906/">**National Institue of Health<br></a>
+            <a href="https://www.ama-assn.org/press-center/ama-press-releases/ama-physician-enthusiasm-grows-health-care-ai">*American Medical Association</a>
+        </div>
+     </section>
+
+     <!--Arecibo AI-as-a-Service & values section  -->
+     <section class="aiaas">
+        <div class="aiaas-text">
+            <h4 class="section-heading text-sm">Arecibo AI-as-a-Service</h4>
+            <h2>We Develop AI-based Solutions<br>For All Health Fields</h2>
+            <div class="aiaas-line"></div>
+        </div>
+        <img src="/images/services/ai-robot.png" alt="ai healthcare robot">
+     </section>
+     <section class="aiaas-features">
+        <div class="feature">
+            <h3 class="text-xl">Modular</h3>
+            <p>We customize products based on business requirements and build on the customer's cloud environment. They keep the use-case IP and can CapEx the expenditure.</p>
+        </div>
+        <div class="feature">
+            <h3 class="text-xl">Trust</h3>
+            <p>Our work is always evidence-based, designed from health informatics, and utilizes responsibly governed NLP.</p>
+        </div>
+        <div class="feature">
+            <h3 class="text-xl">Human-centric</h3>
+            <p>We focus on the people by co-developing with experts in translating AI into actionable insights that enhance human healthcare decisions.</p>
+        </div>
+     </section>
+
+     <section class="aiaas-banner">
+        <div class="banner-content">
+            <h5>Arecibo AIaaS</h5>
+            <h2>Let's Transform Healthcare Technology Together</h2>
+        </div>
+     </section>
+
+     <!-- work with us -->
+<section class="work-with-us bg-light-blue" id="join-us">
+    <div class="container">
+        <h3 class="text-xl work-title">Connect With Us!</h3>
+
+        <p class="text-md work-description">
+            Investing in the next wave of responsible AI? We’re building verifiable, regulation-ready systems that deliver measurable impact in healthcare. Contact our team to get involved.
+        </p>
+
+        <form class="work-form" action="#" method="post">
+            <div class="form-control">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" required>
+            </div>
+
+            <div class="form-control">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" required>
+            </div>
+
+            <div class="form-control">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LdLkKArAAAAAOLfBd-nSgZfICitqEY3KmThJ9h8"></div>
+            <input type="button" value="Send Message" onclick="sendMessage()" class="btn">
+        </form>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="footer bg-dark">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Column 1: Newsletter -->
+            <div class="card">
+                <h4>Suscribe to Newsletter</h4>
+                <p class="text-sm">
+                    Subscribe now to explore the future of AgeTech.
+                </p>
+                <form>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Column 2: Logo -->
+            <div>
+                <a href="index.html">
+                    <img src="images/footer_logo.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Column 3: Company -->
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About&nbsp;Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Us -->
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:team@arecibo.ai">bennyesparra@gmail.com</a></li>
+                    <li><a href="#">999-999-9999</a></li>
+                </ul>
+                <!-- Optional icons -->
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/company/arecibo-ai/?viewAsMember=true" target="_blank"
+                       rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
