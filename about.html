@@ -49,7 +49,8 @@
   <header class="about-hero">
     <div class="hero-overlay">
       <div class="mission-card">
-        <h2 class="section-heading text-xl">Our Mission</h2>
+        <h2 class="text-xl">Our Mission</h2>
+        <div class="orange-line"></div>
           <p>
             Whether its through our product that empowers meaningful engagement with elders or with our AI services, 
             we hope to bridge the gap between humanity and augmented intelligence.
@@ -63,7 +64,8 @@
   <section class="values bg-light-blue">
     <div class="container edge about-grid">
         <div class="text-block">
-            <h2 class="section-heading text-xl">Our Values</h2>
+            <h2 class="text-xl">Our Values</h2>
+            <div class="orange-line"></div>
             <ul class="values-list">
                 <li><strong>Human‑Centered Simplicity:</strong> We prioritize the community. Our tools are designed to reduce complexity in service while still providing essential support to the people.</li>
                 <li><strong>Trustworthy Innovation:</strong> We make evidence-first, compliant and auditable AI tools to enhance the quality and research of healthcare alongside humans.</li>
@@ -78,7 +80,8 @@
   <section id="our-story" class="mission bg-light-blue">
     <div class="container edge about-grid reverse">
       <div class="text-block">
-        <h2 class="section-heading text-xl">Our Story</h2>
+        <h2 class="text-xl">Our Story</h2>
+        <div class="orange-line"></div>
         <p class="text-md">
           Our story began in 2024. Motivated by his own personal care-giving journey, Benny Esparra partnered with 
           Dr. Yanshan and a team of interns to build Arecibo AI, laying the roots for smarter elder care
@@ -207,96 +210,104 @@
 
 
  <!-- work with us -->
-    <section class="work-with-us bg-light-blue">
-        <div class="container">
-            <h3 class="text-xl work-title">Connect With Us!</h3>
+<section class="work-with-us bg-light-blue" id="join-us">
+    <div class="container">
+        <h3 class="text-xl work-title">Connect With Us!</h3>
 
-            <p class="text-md work-description">
-                Investing in the next wave of responsible AI? We’re building verifiable, regulation-ready systems that deliver measurable impact in healthcare. Contact our team to get involved.
-
-            </p>
-
-            <form class="work-form" action="#" method="post">
-                <div class="form-control">
-                    <label for="contact-name">Name</label>
-                    <input type="text" id="contact-name" name="name" required>
-                </div>
-
-                <div class="form-control">
-                    <label for="contact-email">Email</label>
-                    <input type="email" id="contact-email" name="email" required>
-                </div>
-
-                <div class="form-control">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!--footer-->
-    <footer class="footer bg-dark">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Column 1: Newsletter -->
-      <div class="card">
-        <h4>Suscribe to Newsletter</h4>
-        <p class="text-sm">
-          Subscribe now to explore the future of AgeTech.
+        <p class="text-md work-description">
+            Investing in the next wave of responsible AI? We’re building verifiable, regulation-ready systems that deliver measurable impact in healthcare. Contact our team to get involved.
         </p>
-        <form>
-          <input type="email" id="email" placeholder="Enter your email">
-          <button type="submit" class="btn">Subscribe</button>
+
+        <form class="work-form" action="#" method="post">
+            <div class="form-control">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" required>
+            </div>
+
+            <div class="form-control">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" required>
+            </div>
+
+            <div class="form-control">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LdLkKArAAAAAOLfBd-nSgZfICitqEY3KmThJ9h8"></div>
+            <input type="button" value="Send Message" onclick="sendMessage()" class="btn">
         </form>
-      </div>
-
-      <!-- Column 2: Logo -->
-      <div>
-            <a href="index.html">
-                <img src="images/footer_logo.png" alt="logo">
-            </a>
-       </div>
-
-      <!-- Column 3: Company -->
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About&nbsp;Us</a></li>
-          <li><a href="services.html">Services</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Contact Us -->
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:team@arecibo.ai">bennyesparra@gmail.com</a></li>
-          <li><a href="#">999-999-9999</a></li>
-        </ul>
-        <!-- Optional icons -->
-        <div class="footer-icons">
-          <a href="https://www.linkedin.com/company/arecibo-ai/?viewAsMember=true" target="_blank" rel="noopener">
-            <i class="fab fa-linkedin"></i>
-           </a>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-facebook"></i>
-        </div>
-      </div>
     </div>
-  </div>
+</section>
+
+<!--footer-->
+<footer class="footer bg-dark">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Column 1: Newsletter -->
+            <div class="card">
+                <h4>Suscribe to Newsletter</h4>
+                <p class="text-sm">
+                    Subscribe now to explore the future of AgeTech.
+                </p>
+                <form>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Column 2: Logo -->
+            <div>
+                <a href="index.html">
+                    <img src="images/footer_logo.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Column 3: Company -->
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About&nbsp;Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Us -->
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:team@arecibo.ai">bennyesparra@gmail.com</a></li>
+                    <li><a href="#">999-999-9999</a></li>
+                </ul>
+                <!-- Optional icons -->
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/company/arecibo-ai/?viewAsMember=true" target="_blank"
+                       rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  <!--jQuery CDN-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Toast Container -->
+<div class="toast-container" id="toast-container"></div>
 
-  <!--owl carousel min.js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  
-  <script src="js/main.js"></script>
+<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings =
+            {"appId":"1b0ffd97b98e3a8d7567c0e6f6936af97","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

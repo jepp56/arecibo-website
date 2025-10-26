@@ -50,6 +50,18 @@ document.querySelectorAll('.learnMoreBtn').forEach(btn => {
   };
 });
 
+document.querySelectorAll('.learnMoreARC').forEach(btn => {
+  btn.onclick = () => {
+    window.location.href = 'products.html';
+  };
+});
+
+document.querySelectorAll('.learnMoreAIaaS').forEach(btn => {
+  btn.onclick = () => {
+    window.location.href = 'services.html';
+  };
+});
+
 document.querySelectorAll('.joinUsBtn').forEach(btn => {
   btn.onclick = () => {
     const target = document.getElementById('join-us');
