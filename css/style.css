@@ -1365,6 +1365,23 @@ html {
 
 }
 
+@media(min-width: 1200px) {
+  .features-content h1{ 
+    font-size: 3rem;
+  }
+  .feature-item h3 {
+    font-size: 1.5rem
+  }
+  .features-content .features-subtitle {
+    font-size: 1rem;
+    max-width: 700px;
+    margin-left: 10px;
+  }
+  .feature-title i {
+    font-size: 2.3rem;
+  }
+}
+
 /* our motivation for change */
 .motivation {
   position: relative;
@@ -1452,7 +1469,6 @@ html {
   left: 10%;
 }
 
-/* --- Responsive Design --- */
 @media (max-width: 1100px) {
   .motivation {
     min-height: 80vh;
@@ -1526,7 +1542,8 @@ html {
 .arc-header {
   color: var(--dark-blue);
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .arc h1 {
@@ -1555,6 +1572,10 @@ html {
   justify-content: center;
 }
 
+.arc h3 {
+  margin-top: 15px;
+}
+
 .arc-card {
   position: relative;
   border-radius: 15px;
@@ -1566,6 +1587,12 @@ html {
   width: 100%;
   object-fit: cover;
   transition: opacity 0.4 ease;
+}
+
+@media (max-width: 1200px) {
+  .arc-description {
+    padding: 0 50px;
+  }
 }
 
 /* Overlay content */
