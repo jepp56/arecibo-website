@@ -1146,8 +1146,9 @@ html {
  }
 
  .aiaas img {
-  min-width: 40%;
+  max-width: 40%;
   margin-top: 1rem;
+  margin-right: 20px;
  }
 
  .aiaas-features {
@@ -1386,7 +1387,6 @@ html {
 .motivation {
   position: relative;
   background: url('/images/products/our-motivation.png') center/cover no-repeat;
-  color: #fff;
   padding: 100px 0;
   text-align: center;
 }
@@ -1421,8 +1421,8 @@ html {
   position: absolute;
   background: var(--light-blue);
   color: var(--header-color);
-  border-radius: 10px;
-  padding: 25px 25px;
+  border-radius: 25px;
+  padding: 30px 30px;
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: left;
@@ -1451,7 +1451,7 @@ html {
 /* Staggered layout positions */
 .stat1 {
   top: 1%;
-  right: 15%;
+  right: 14%;
 }
 
 .stat2 {
@@ -1461,47 +1461,15 @@ html {
 
 .stat3 {
   bottom: 15%;
-  right: 10%;
+  right: 20%;
 }
 
 .stat4 {
-  bottom: -10%;
+  bottom: -5%;
   left: 10%;
 }
 
-@media (max-width: 1100px) {
-  .motivation {
-    min-height: 80vh;
-    height: auto;
-  }
-
-  .motivation-overlay {
-    padding: 40px 20px;
-  }
-
-  .motivation-overlay h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-
-  .motivation-stats {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .motivation-stat {
-    position: relative;
-    max-width: 700px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .stat1, .stat2, .stat3, .stat4 {
-    top: auto; bottom: auto; left: auto; right: auto;
-  }
-}
-
-@media (max-height: 700px) {
+@media (max-width: 1200px) {
   .motivation {
     min-height: 80vh;
     height: auto;
@@ -1530,6 +1498,57 @@ html {
   }
   .stat1, .stat2, .stat3, .stat4 {
     top: auto; bottom: auto; left: auto; right: auto;
+  }
+
+}
+
+@media (max-height: 750px) {
+  .motivation {
+    min-height: 80vh;
+    height: auto;
+  }
+
+  .motivation-overlay {
+    padding: 40px 20px;
+  }
+
+  .motivation-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .motivation-stats {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .motivation-stat {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .stat1, .stat2, .stat3, .stat4 {
+    top: auto; bottom: auto; left: auto; right: auto;
+  }
+}
+
+@media(min-width: 1400px) and (min-height:825px){
+.motivation-overlay h2 {
+    font-size: 3.7rem;
+    margin-bottom: 30px;
+  }
+  .motivation-stat {
+    font-size: 1.7rem;
+    padding: 30px;
+    min-width: 400px;
+  }
+  .stat4{
+    bottom: 2%;
+  }
+  .stat3{
+    left: 60%;
   }
 }
 
@@ -1589,9 +1608,15 @@ html {
   transition: opacity 0.4 ease;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .arc-description {
-    padding: 0 50px;
+    padding: 0 300px;
+  }
+  .arc-header{
+    font-size: 1.2rem;
+  }
+  .arc h1{
+    font-size: 2.5rem;
   }
 }
 
