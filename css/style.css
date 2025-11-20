@@ -610,10 +610,11 @@ html {
   padding-top: 50px;
   color: #ccc;
   font-size: 0.7rem;
+  font-weight: 500;
 }
 
 .footer-icons {
-  margin-top: 55px;
+  margin-top: 87px;
 }
 
 .footer i {
