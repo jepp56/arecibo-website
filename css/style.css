@@ -574,7 +574,8 @@ html {
 
 /*footer*/
 .footer {
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 .footer h4 {
@@ -602,6 +603,13 @@ html {
   color: #000;
   border-radius: 10px;
   padding: 20px;
+}
+
+.copyright {
+  margin-left: 5px;
+  padding-top: 50px;
+  color: #ccc;
+  font-size: 0.7rem;
 }
 
 .footer-icons {
@@ -1095,13 +1103,13 @@ html {
 }
 
 .sources {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: right;
 }
 
 .sources a{
   color: #666;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 
 .sources a:hover {
@@ -1171,6 +1179,53 @@ html {
   max-width: 320px;
   margin-bottom: 40px;
  }
+
+ /* trending services offered section */
+
+ .services-offered {
+    padding: 4rem;
+    padding-top: 5rem;
+  }
+
+.services-offered .service-container {
+    margin: auto;
+  }
+
+.services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 30px;
+  }
+  .service-item h3 {
+      font-size: 20px;
+      margin: 12px 0 6px;
+      color: var(--header-color);
+      line-height: 1.3;
+  }
+
+  .service-item{
+      padding-left: 2rem;
+  }
+
+  .service-item p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+      max-width: 90%;
+  }
+
+  .service-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 8px;
+      opacity: 0.9;
+      color: var(--dark-blue);
+  }
+
+  .services-offered .orange-line{
+    margin-bottom: 4rem;
+  }
 
  /* image banner */
  .aiaas-banner {
