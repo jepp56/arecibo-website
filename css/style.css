@@ -368,8 +368,7 @@ html {
     display: none;
   }
   .about-text .statement-description{
-    width: 100%;
-    max-width: none;
+   padding-right: 0;;
   }
  }
 
@@ -1779,7 +1778,57 @@ html {
 
 }
 
-@media (max-height: 768px) {
+@media (max-height: 750px) {
+  .motivation {
+    min-height: 80vh;
+    height: auto;
+  }
+
+  .motivation-overlay {
+    padding: 40px 20px;
+  }
+
+  .motivation-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .motivation-stats {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .motivation-stat {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .stat1, .stat2, .stat3, .stat4 {
+    top: auto; bottom: auto; left: auto; right: auto;
+  }
+}
+
+@media(min-width: 1400px) and (min-height:825px){
+.motivation-overlay h2 {
+    font-size: 3.7rem;
+    margin-bottom: 30px;
+  }
+  .motivation-stat {
+    font-size: 1.7rem;
+    padding: 30px;
+    min-width: 400px;
+  }
+  .stat4{
+    bottom: 2%;
+  }
+  .stat3{
+    left: 60%;
+  }
+}
+
+@media (max-width: 768px) {
   .motivation {
     min-height: 80vh;
     height: auto;
