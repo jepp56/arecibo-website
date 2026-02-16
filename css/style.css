@@ -281,7 +281,7 @@ html {
     width: 90%;
     max-width: 90%;
     left: 50%;
-    top: 15%;
+    top: 20%;
     transform: translateX(-50%);
     padding-right: 0;
   }
@@ -297,7 +297,7 @@ html {
   }
 
   .carousel .list .item img{
-    filter: brightness(60%);
+    filter: brightness(50%);
     object-position: 60% center;
   }
 
