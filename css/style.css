@@ -94,10 +94,10 @@ html {
 }
 
 
-@media (max-width: 768) {
-  .navbar ul li a{
-    padding: 21px 4px;
-    font-size: 0.8rem;
+@media (max-width: 768px) {
+  .navbar .main-menu li a{
+    padding: 21px 8px;
+    font-size: 0.9rem;
   }
   .logo-text img {
     height: 30px;
