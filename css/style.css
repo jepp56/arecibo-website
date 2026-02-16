@@ -22,6 +22,7 @@ body {
     background: #fff;
     -webkit-font-smoothing: antialiased;
     margin: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -261,6 +262,47 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .carousel {
+    height: 90vh;
+  }
+
+  .carousel .list .item img {
+    margin-top: 70px;
+  }
+
+  .carousel .list .item .content {
+    width: 90%;
+    max-width: 90%;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .carousel .list .item .content .title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .carousel .list .item .content .description {
+    font-size: 0.9rem;
+  }
+
+  .carousel .list .item .content .buttons {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .arrows {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
 /* mission statement */
 .about-flex {
   display: flex;
@@ -348,10 +390,22 @@ html {
 }
 
 @media (max-width: 850px) {
-  .targeting-title-big {
-    font-size: 2.5rem;
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 0;
+    gap: 30px;
   }
- }
+
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .app-mockup {
+    max-width: 80%;
+  }
+}
+
  @media (min-width: 1400px) {
    .targeting-title-big {
     font-size: 6rem;
@@ -785,17 +839,12 @@ html {
   padding-top: 18%;
 }
 
-@media(min-width: 650) {
-  .mission-card {
-    width: 100%;
-  }
-}
-
 /* mission text box */
 .mission-card {
   background-color: var(--light-blue);
-  padding: 3rem 4rem;
-  width: 60%;
+  padding: 70px 40px;
+  margin-bottom: 10rem;
+  /**width: 60%;**/
   max-width: 1000px;
   text-align: left;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
@@ -812,6 +861,37 @@ html {
   line-height: 1.6;
   color: var(--header-color);
 
+}
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    height: auto;                 /* remove full screen height */
+    background: none;             /* remove background image */
+    display: block;               /* remove flex centering */
+  }
+
+  .about-hero::before {
+    display: none;                /* remove dark overlay */
+  }
+
+  .hero-overlay {
+    display: block;
+    padding: 0;
+  }
+
+  .mission-card{
+    margin-bottom: 0;
+  }
+
+  /* Add the background image BELOW the mission section */
+  .about-hero::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 300px;                
+    background: url('../images/about/arecibo-telescope-hero.png') no-repeat center center/cover;
+  }
 }
 
 .about-grid {
@@ -925,6 +1005,79 @@ html {
     font-size: 1.2rem;
   }
  }
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid.reverse {
+    direction: ltr;
+  }
+
+  .text-block {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+  }
+
+  .about-grid img {
+    order: 2;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-grid > .text-block {
+    order: 1;
+  }
+
+  .text-block .text-xl {
+    font-size: 1.8rem;
+  }
+
+  .text-block p,
+  .values-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Stack The Inspiration Section */
+  .arecibo-message {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .arecibo-message .image-circle {
+    max-width: 100%;
+    margin: 30px 0 0 0;
+  }
+
+  .arecibo-message .text {
+    text-align: center;
+  }
+
+  /* Stack The Arecibo Radio Section */
+  .arecibo-radio {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .arecibo-radio .image-circle {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .arecibo-radio .text {
+    margin-bottom: 20px;
+  }
+
+}
+
+
 
  /*our team section*/
  .our-team {
@@ -1622,8 +1775,14 @@ html {
 .arc-description {
   color: var(--header-color);
   font-size: 1rem;
-  padding: 10px 300px;
+  padding: 10px 20px;
   margin-bottom: 70px;
+}
+
+@media (min-width: 1200px) {
+  .arc-description {
+    padding: 0 300px;
+  }
 }
 
 .orange-line-center {
@@ -1668,6 +1827,41 @@ html {
     font-size: 2.5rem;
   }
 }
+@media (max-width: 768px) {
+
+  .arc-description {
+    padding: 10px 20px;
+  }
+
+  .services-offered {
+    padding: 2rem 1rem;
+  }
+
+  .study-findings {
+    padding: 2rem 1rem;
+  }
+
+  .aiaas {
+    padding: 2rem 1rem;
+  }
+
+  .features-content {
+    padding: 40px 20px;
+  }
+
+  .aiaas-line {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .product-hero-text {
+    left: 30%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+  }
+
+}
+
 
 /* Overlay content */
 .arc-overlay {
