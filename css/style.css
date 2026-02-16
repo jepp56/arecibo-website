@@ -720,8 +720,8 @@ html {
 }
 @media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
   }
   .footer-logo {
     display: none;
@@ -1079,10 +1079,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  .inspiration-title {
-    padding: 0 10px;
-  }
-
   .arecibo-message {
     flex-direction: column;
     padding: 0 20px;
@@ -1090,14 +1086,13 @@ html {
 
   .arecibo-message .image-circle {
     max-width: 100%;
-    margin: 30px 0 0 0;
+    margin: 20px 0 20px 0;
   }
 
   .arecibo-message .text {
     text-align: center;
   }
 
-  /* Stack The Arecibo Radio Section */
   .arecibo-radio {
     flex-direction: column;
     padding: 40px 20px;
@@ -1486,6 +1481,9 @@ html {
     }
     .aiaas .img {
       display: none;
+    }
+    .aiaas-banner {
+      object-position: 70% right;
     }
     .banner-content h5{
       font-size: 1rem;
