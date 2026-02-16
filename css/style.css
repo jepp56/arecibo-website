@@ -94,7 +94,7 @@ html {
 }
 
 
-@media (max-width: 850px) {
+@media (max-width: 768) {
   .navbar ul li a{
     padding: 21px 4px;
     font-size: 0.8rem;
@@ -124,6 +124,11 @@ html {
   inset: 0 0 0 0;
 
 }
+
+.carousel .orange-line{
+    margin-left: 0;
+  }
+
 .carousel .list .item img{
   width: 100%;
   height: 100%;
@@ -288,6 +293,12 @@ html {
 
   .carousel .list .item .content .description {
     font-size: 0.9rem;
+    max-width: 80%;
+  }
+
+  .carousel .list .item img{
+    filter: brightness(60%);
+    object-position: 60% center;
   }
 
   .carousel .list .item .content .buttons {
@@ -342,6 +353,9 @@ html {
 .about-us {
     color: var(--dark-blue);
 }
+.mission .orange-line {
+  margin-left: 0;
+}
 .statement-content {
     padding: 20px 0 50px;
 }
@@ -353,10 +367,9 @@ html {
   .about-image img{
     display: none;
   }
-  .about-text {
+  .about-text .statement-description{
     width: 100%;
     max-width: none;
-    padding: 40px 20px; 
   }
  }
 
@@ -573,7 +586,7 @@ html {
   }
 
   .app-mockup {
-    max-width: 70%;
+    max-width: 90%;
     margin: 50px auto auto auto;
   }
 }
@@ -707,11 +720,11 @@ html {
 }
 @media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 10px;
   }
   .footer-logo {
-    width: 100%;
+    display: none;
   }
   .team-members { gap: 30px; }
   .team-title-big { font-size: 2rem; text-align: center; margin-left: 0; }
@@ -890,13 +903,13 @@ html {
 @media (max-width: 768px) {
 
   .about-hero {
-    height: auto;                 /* remove full screen height */
-    background: none;             /* remove background image */
-    display: block;               /* remove flex centering */
+    height: auto;                 
+    background: none;         
+    display: block;              
   }
 
   .about-hero::before {
-    display: none;                /* remove dark overlay */
+    display: none;               
   }
 
   .hero-overlay {
@@ -908,7 +921,6 @@ html {
     margin-bottom: 0;
   }
 
-  /* Add the background image BELOW the mission section */
   .about-hero::after {
     content: "";
     display: block;
@@ -1067,8 +1079,10 @@ html {
 }
 
 @media (max-width: 768px) {
+  .inspiration-title {
+    padding: 0 10px;
+  }
 
-  /* Stack The Inspiration Section */
   .arecibo-message {
     flex-direction: column;
     padding: 0 20px;
@@ -1100,8 +1114,6 @@ html {
   }
 
 }
-
-
 
  /*our team section*/
  .our-team {
@@ -1470,6 +1482,7 @@ html {
     .aiaas-text h2{
       font-size: 2rem;
       max-width: 900px;
+      margin-left: 10px;
     }
     .aiaas .img {
       display: none;
@@ -1668,7 +1681,7 @@ html {
 }
 
 .motivation-overlay h2 {
-  background-color: var(--light-blue);
+  background: rgba(215, 223, 228, 0.8);
   color: var(--dark-blue);
   font-size: 3rem;
   font-weight: 600;
@@ -1685,7 +1698,7 @@ html {
 
 .motivation-stat {
   position: absolute;
-  background: var(--light-blue);
+  background: rgba(215, 223, 228, 0.8);
   color: var(--header-color);
   border-radius: 25px;
   padding: 30px 30px;
@@ -1768,7 +1781,7 @@ html {
 
 }
 
-@media (max-height: 750px) {
+@media (max-height: 768px) {
   .motivation {
     min-height: 80vh;
     height: auto;
@@ -1779,21 +1792,29 @@ html {
   }
 
   .motivation-overlay h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.9rem;
+    margin-top: -70px;
+    margin-bottom: 40px;
   }
 
   .motivation-stats {
     display: flex;
     flex-direction: column;
-    position: relative;
+    gap: 15px;    
   }
 
   .motivation-stat {
-    position: relative;
     max-width: 800px;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding: 20px;
+  }
+
+  .motivation-stat a {
+    font-size: 0.7rem;
   }
   .stat1, .stat2, .stat3, .stat4 {
     top: auto; bottom: auto; left: auto; right: auto;
@@ -1894,7 +1915,11 @@ html {
 @media (max-width: 768px) {
 
   .arc-description {
-    padding: 10px 20px;
+    padding: 0;
+  }
+  .arc-card .arc-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   .services-offered {
