@@ -720,7 +720,7 @@ html {
 }
 @media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   .footer-logo {
@@ -1798,7 +1798,7 @@ html {
   .motivation-stats {
     display: flex;
     flex-direction: column;
-    gap: 15px;    
+    gap: 17px;    
   }
 
   .motivation-stat {
@@ -1806,7 +1806,7 @@ html {
     width: 80%;
     margin: auto;
     margin-bottom: 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.2;
     padding: 20px;
   }
