@@ -109,6 +109,10 @@ html {
 
 /* ------------- home page --------------*/
 /* hero */
+.hero {
+  margin-top: 60px;
+}
+
 .carousel {
   width: 100vw;
   height: 100vh;
@@ -124,7 +128,6 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-top: 60px;
   filter: brightness(80%);
 }
 .carousel .list .item .content {
@@ -156,17 +159,19 @@ html {
   opacity: 90%;
 }
 .carousel .list .item .content .buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 130px);
-  grid-template-rows: 40px;
-  gap: 5px;
+  display: flex;
+  gap: 12px;
   margin-top: 20px;
 }
 .carousel .list .item .content button {
+  min-width: 150px;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 0.9rem;
+  border-radius: 4px;
   border: none;
   background-color: var(--orange);
   letter-spacing: 3px;
-  font-weight: 500;
   transition: .5s;
 }
 .carousel .list .item .content button:nth-child(2) {
@@ -256,7 +261,7 @@ html {
     padding-right: 0;
     top: 28%;
   }
-
+  
   .carousel .list .item .content .title {
     font-size: 3rem;
   }
@@ -264,21 +269,16 @@ html {
 
 @media (max-width: 768px) {
   .carousel {
-    height: 90vh;
-  }
-
-  .carousel .list .item img {
-    margin-top: 70px;
+    height: 95vh;
   }
 
   .carousel .list .item .content {
     width: 90%;
     max-width: 90%;
     left: 50%;
-    top: 25%;
+    top: 15%;
     transform: translateX(-50%);
     padding-right: 0;
-    text-align: center;
   }
 
   .carousel .list .item .content .title {
@@ -292,16 +292,29 @@ html {
 
   .carousel .list .item .content .buttons {
     grid-template-columns: 1fr;
-    justify-content: center;
+    justify-content: left;
+  }
+
+  .carousel .list .item .content button {
+    width: 180px;
+    height: 40px;
+    font-size: 0.8rem;
   }
 
   .arrows {
-    top: 88%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 80%;
+    left: 25px;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .arrows button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 }
-
 
 /* mission statement */
 .about-flex {
@@ -336,9 +349,14 @@ html {
   padding-right: 100px;
 }
 
-@media (max-width: 850px) {
-  .about-image {
+@media (max-width: 768px) {
+  .about-image img{
     display: none;
+  }
+  .about-text {
+    width: 100%;
+    max-width: none;
+    padding: 40px 20px; 
   }
  }
 
@@ -388,29 +406,6 @@ html {
     text-align: left;
     margin: 0;
 }
-
-@media (max-width: 850px) {
-  .inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin: 0;
-    gap: 30px;
-  }
-
-  .left h1 {
-    font-size: 2rem;
-  }
-
-  .app-mockup {
-    max-width: 80%;
-  }
-}
-
- @media (min-width: 1400px) {
-   .targeting-title-big {
-    font-size: 6rem;
-   }
- }
 
 /* by the numbers section */
 .stats-section {
@@ -524,7 +519,6 @@ html {
   color: var(--header-color);
   margin: 20px 0 40px;
   font-size: 4rem;
-  
 }
 
 .accent-bar {
@@ -547,26 +541,49 @@ html {
   object-fit: contain;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+  .targeting-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .targeting-section .image,
+  .targeting-section .text {
+    width: 100%;
+  }
+
   .inner {
     grid-template-columns: 1fr;
     text-align: center;
     margin: 0;
+    gap: 30px;
   }
+
+  .left h1 {
+    line-height: 1.2;
+    margin-top: -30px;
+  }
+
   .accent-bar {
     display: none;
   }
+
   .difference-buttons {
     justify-content: center;
   }
-  .right {
-    margin-top: 40px;
-  }
+
   .app-mockup {
     max-width: 70%;
-    margin: auto;
+    margin: 50px auto auto auto;
   }
 }
+
+ @media (min-width: 1400px) {
+   .targeting-title-big {
+    font-size: 6rem;
+   }
+ }
+
 
 /* Work With Us section */
 .work-with-us {
@@ -620,9 +637,13 @@ html {
     align-self: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .work-form { padding: 0 12px; }
   .work-form .btn { width: 100%; }
+  .work-title,
+  .work-description {
+    padding: 10px 10px;
+  }
 }
 
 
@@ -684,10 +705,13 @@ html {
     border-radius: 5px;
     margin: 10px 0;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .footer-logo {
+    width: 100%;
   }
   .team-members { gap: 30px; }
   .team-title-big { font-size: 2rem; text-align: center; margin-left: 0; }
@@ -1413,21 +1437,61 @@ html {
   font-size: 3.5rem;
  }
 
- @media (max-width: 850px) {
-  .aiaas {
-    padding: 1rem 1rem;
-  }
-  .aiaas-text h2{
-    font-size: 2rem;
-    max-width: 800px;
-  }
-  .banner-content h5{
-    font-size: 1rem;
-  }
-  .banner-content h2{
-    font-size: 2rem;;
-  }
- }
+ @media (max-width: 768px) {
+    .services-hero {
+        padding: 60px 20px; 
+    }
+    .services-hero .orange-line {
+      margin-left: 0px;
+    }
+    .overlay {
+        padding-left: 1rem; 
+        justify-content: left;
+    }
+    .hero-content {
+        max-width: 80%;
+        margin: 0 20;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem; 
+        line-height: 1.2;  
+        margin-bottom: 1rem;
+    }
+    .study-findings {
+      line-height: 1.3;
+    }
+    .service-description {
+        font-size: 0.9rem; 
+        line-height: 1.4;  
+    }
+    .aiaas {
+      padding: 1rem 1rem;
+    }
+    .aiaas-text h2{
+      font-size: 2rem;
+      max-width: 900px;
+    }
+    .aiaas .img {
+      display: none;
+    }
+    .banner-content h5{
+      font-size: 1rem;
+    }
+    .banner-content h2{
+      font-size: 2rem;;
+    }
+    .services-offered .section-heading,
+    .orange-line{
+      margin-left: 15px;
+    }
+    .aiaas .section-heading{
+      margin-left: 15px;
+    }
+    .study-findings .section-heading{
+      margin-left: 15px;
+    }
+    
+}
 
  /* ------------- Products Section -------------------*/
  .arc-image{
