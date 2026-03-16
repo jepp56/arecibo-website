@@ -1741,7 +1741,7 @@ html {
 }
 
 .stat4 {
-  bottom: -5%;
+  bottom: -10%;
   left: 10%;
 }
 
@@ -1778,7 +1778,7 @@ html {
 
 }
 
-@media (max-height: 750px) {
+@media (max-height: 730px) {
   .motivation {
     min-height: 80vh;
     height: auto;
