@@ -240,4 +240,31 @@ const observer = new IntersectionObserver(entries => {
   }
 }, { threshold: 0.5 });
 
-observer.observe(document.querySelector('#stats'));
+const statsSection = document.querySelector('#stats');
+if (statsSection) {
+  observer.observe(statsSection);
+}
+
+//how we make a difference transitions
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.3 // triggers when 15% visible
+});
+
+const animatedElements = document.querySelectorAll('.slide-in-left, .fade-in, .fade-left');
+
+animatedElements.forEach(el => observer2.observe(el));
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.fade-in, .fade-left, .slide-in-left').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add('show');
+    }
+  });
+});

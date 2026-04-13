@@ -553,6 +553,26 @@ html {
   object-fit: contain;
 }
 
+/* transitions */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 1.2s ease-out;
+  transition-delay: 0.2s;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 2s ease-out;
+  transition-delay: 0.2s;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 @media (max-width: 768px) {
   .targeting-section {
     display: flex;
@@ -1443,6 +1463,24 @@ html {
   font-size: 3.5rem;
  }
 
+ /* transitions */
+ .fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s ease-out;
+ }
+
+ .fade-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-left.delay {
+  transition-delay: 0.3s;
+}
+
+
+
  @media (max-width: 768px) {
     .services-hero {
         padding: 60px 20px; 
@@ -1945,7 +1983,7 @@ html {
 .arc-card img {
   width: 100%;
   object-fit: cover;
-  transition: opacity 0.4 ease;
+  transition: opacity 2s ease;
 }
 
 @media (min-width: 1200px) {
